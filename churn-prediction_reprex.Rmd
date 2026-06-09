@@ -1,0 +1,55 @@
+```{r reprex-options, include = FALSE}
+options(
+  keep.source = TRUE,
+  crayon.enabled = FALSE,
+  reprex.current_venue = "gh"
+)
+```
+
+```{r, results = 'asis', echo = FALSE, include = file.exists('.Rprofile'), eval = file.exists('.Rprofile')}
+cat(sprintf("*Local `.Rprofile` detected at `%s`*", normalizePath(".Rprofile")))
+```
+
+---
+output:
+  reprex::reprex_document:
+    venue: "gh"
+    advertise: FALSE
+    session_info: TRUE
+    style: TRUE
+    comment: "#;-)"
+    tidyverse_quiet: FALSE
+    std_out_err: TRUE
+knit: reprex::reprex_render
+---
+
+
+## Code style
+
+
+```{r}
+x=1;y=2;z=x+y;z
+```
+
+## Quiet tidyverse
+
+
+```{r, eval = requireNamespace("tidyverse", quietly = TRUE)}
+library(tidyverse)
+```
+
+
+## Session info
+
+
+<details style="margin-bottom:10px;">
+<summary>Standard output and standard error</summary>
+
+</details>
+
+<details style="margin-bottom:10px;">
+<summary>Session info</summary>
+```{r }
+sessionInfo()
+```
+</details>
